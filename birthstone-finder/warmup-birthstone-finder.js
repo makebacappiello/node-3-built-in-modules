@@ -21,3 +21,12 @@ const birthstones = {
   November: "Topaz or Citrine",
   December: "Tanzanite, Zircon, or Turquoise",
 };
+let month = process.argv[2];
+function getBirthstone() {
+  if (!birthstones[month]) {
+    console.log("Invalid month. Please enter a valid month name.");
+  } else {
+    console.log(`The birthstone for ${month} is ${birthstones[month]}.`);
+  }
+}
+getBirthstone();
